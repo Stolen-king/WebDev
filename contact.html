@@ -164,5 +164,18 @@
 
 
 </body>
+    
+<script>
+    document.getElementById('fileInput').addEventListener('change', function() {
+        const fileMessage = document.getElementById('fileMessage');
+        if (this.files.length > 0) {
+            fileMessage.textContent = this.files[0].name;
+        } else {
+            fileMessage.textContent = 'No file chosen';
+        }
+    });
+</script>
+
+
 
 </html>
